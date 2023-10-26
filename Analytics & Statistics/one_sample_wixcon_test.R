@@ -1,0 +1,11 @@
+#one sample wilxcon test
+One_sample_Wilcoxon_test <- read_excel("C:/Users/dbda/Downloads/One sample Wilcoxon test.xlsx")
+attach(One_sample_Wilcoxon_test)
+library(nortest)
+shapiro.test(diameter)
+wilcox.test(diameter, mu = 35, alternative = "two.sided")
+data("mtcars")
+attach(mtcars)
+library(nortest)
+shapiro.test(mpg)
+wilcox.test(mpg~am,data=mtcars)
